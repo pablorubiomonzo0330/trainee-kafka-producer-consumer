@@ -9,6 +9,7 @@ export class KafkaProducerService {
     private shipmentLossEvent
 
     constructor(shipmentLossEvent: ShipmentLossEventModel){
+        console.log(shipmentLossEvent)
         this.kafka = new KafkaConfig().getKafkaInstance()
         this.producer = this.kafka.producer()
         this.shipmentLossEvent = shipmentLossEvent
@@ -16,7 +17,6 @@ export class KafkaProducerService {
 
     public async runProducer(){
         await this.producer.connect();
-
         await this.producer.send({
             topic: process.env.KAFKA_TOPIC_NAME_PRODUCER as string,
             messages: [
