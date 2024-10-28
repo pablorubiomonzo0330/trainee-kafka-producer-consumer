@@ -16,8 +16,8 @@ class KafkaConfig {
         return this.kafkaInstance;
     }
     getClientConfig() {
+        console.log(this.KAFKA_BROKER_URL);
         return {
-            clientId: `trainee_kafkaproject`,
             brokers: [this.KAFKA_BROKER_URL]
         };
     }

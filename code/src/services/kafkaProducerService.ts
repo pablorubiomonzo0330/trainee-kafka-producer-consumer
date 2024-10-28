@@ -1,5 +1,4 @@
 
-
 import { Kafka } from 'kafkajs';
 import {KafkaConfig} from "../appconfig/kafka-config";
 import {ShipmentLossEventModel} from "../models/shipmentLossEventModel";
@@ -9,7 +8,6 @@ export class KafkaProducerService {
     private shipmentLossEvent
 
     constructor(shipmentLossEvent: ShipmentLossEventModel){
-        console.log(shipmentLossEvent)
         this.kafka = new KafkaConfig().getKafkaInstance()
         this.producer = this.kafka.producer()
         this.shipmentLossEvent = shipmentLossEvent

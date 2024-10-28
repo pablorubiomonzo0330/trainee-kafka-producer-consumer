@@ -10,5 +10,4 @@ const shipmentLossEvent = new ShipmentLossEventModel(
     {carrier: "DHL", trackingNumber: "003404340953589324"},
     "test.com"
 )
-
 new KafkaProducerService(shipmentLossEvent).runProducer().catch(e => console.log(e))
