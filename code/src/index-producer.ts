@@ -2,9 +2,9 @@ import {KafkaProducerService} from "./services/kafkaProducerService";
 import {ShipmentLossEventModel} from "./models/shipmentLossEventModel";
 
 const shipmentLossEvent = new ShipmentLossEventModel(
-    "RETURNING_EVENT",
+    "READY_FOR_DELIVERY_DHL",
     "2022-05-01T07:49:12.642Z",
-    "093989849476",
+    "0939898476",
     [{positionItemId: "lhfanagjaodga", salesOrderId: "afiajaifajai"}],
     "432575hsjfhdsjg",
     {carrier: "DHL", trackingNumber: "003404340953589324"},
